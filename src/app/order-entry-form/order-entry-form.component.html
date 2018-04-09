@@ -1,0 +1,122 @@
+
+
+<div class="jumbotron">
+    <div class="container" >
+            <div class="row">
+                    <div class="col-md-4">
+                                           
+            <div class='containerDecoration1'>
+                    <div><h4>Customer Data</h4></div>
+            <table align="center" class="table table-bordered table-striped table-hover">
+                    <tbody  align="center">
+                      <tr >          
+                          <td><label>ID</label></td>
+                        <td>{{customer.id}}</td>
+                      </tr>
+                      <tr>
+                            <td><label>First Name</label></td>
+                        <td>{{customer.firstName}}</td>
+                      </tr>
+                      <tr >
+                            <td><label>Last Name</label></td>
+                        <td>{{customer.lastName}}</td>
+                      </tr >
+                      <tr >
+                            <td><label>Phone</label></td>
+                        <td>{{customer.phone}}</td>
+                    </tr>
+                    <tr >
+                            <td><label>Email</label></td>
+                        <td>{{customer.email}}</td>
+                    </tr>
+                    <tr >
+                            <td><label>Address</label></td>
+                        <td>{{customer.address}}</td>
+                    </tr>
+                    <tr >
+                            <td><label>City</label></td>
+                        <td>{{customer.city}}</td>
+                       
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+                        
+            <div class=" col-md-6">
+            <div class='containerDecoration'>
+    <div><h2>Order Entry Form</h2></div>
+    
+<form [formGroup]="order" type ="post" (ngSubmit)="create()">
+        <div class="form-group">
+                <label for="customerid">Customer Id</label>
+                <input 
+                formControlName="customerid"
+                    id="customerid" 
+                    type="number" 
+                    class="form-control" value={{custid}} >
+            </div>
+<div class="form-group">
+    <label for="movedate">Move Date</label>
+    <input 
+    formControlName="movedate"
+        id="movedate" 
+        type="text" 
+        class="form-control">
+</div>
+
+<div class="form-group">
+    <label for="cityout">Origin City</label>
+    <input 
+    formControlName="cityout"
+        id="cityout" 
+        type="text" 
+        class="form-control">
+</div>
+<div class="form-group">
+    <label for="addressout">Origin Address</label>
+    <input 
+    formControlName="addressout"
+        id="addressout" 
+        type="text" 
+        class="form-control">
+</div>
+<div class="form-group">
+    <label for="cityin">Destination City</label>
+    <textarea 
+    formControlName="cityin"
+        id="cityin" 
+        type="text" 
+        class="form-control">
+        </textarea>
+</div>
+<div class="form-group">
+    <label for="addressin">Destination Address</label>
+    <input 
+    formControlName="addressin"
+        id="addressin" 
+        type="text" 
+        class="form-control">
+</div>
+<div class="form-group">
+<label for="offers">Offers</label>
+<input 
+formControlName="offers"
+    id="offers" 
+    type="text" 
+    class="form-control">
+</div>
+<div class="form-group">
+<label for="extras">Number of Extras</label>
+<input 
+formControlName="extras"
+    id="extras" 
+    type="text" 
+    class="form-control">
+</div>
+<button class="btn btn-primary" type="submit">Next</button>
+</form>
+</div>
+</div>
+</div>
+</div>

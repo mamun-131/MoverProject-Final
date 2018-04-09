@@ -1,0 +1,124 @@
+<div class="jumbotron">
+
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-4">
+
+                                <div class='containerDecoration1'>
+                                        <div>
+                                                <h4>Order Data</h4>
+                                        </div>
+                                        <table align="center" class="table table-bordered table-striped table-hover">
+                                                <tbody align="center">
+                                                        <tr>
+                                                                <td>
+                                                                        <label>Order ID</label>
+                                                                </td>
+                                                                <td>{{orders.id}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>
+                                                                        <label>Customer ID</label>
+                                                                </td>
+                                                                <td>{{orders.customerid}}</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                                <td>
+                                                                        <label>Move Date</label>
+                                                                </td>
+                                                                <td>{{orders.movedate}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>
+                                                                        <label>City Origin</label>
+                                                                </td>
+                                                                <td>{{orders.cityout}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>
+                                                                        <label>Address Origin</label>
+                                                                </td>
+                                                                <td>{{order.addressout}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>
+                                                                        <label>City Destination</label>
+                                                                </td>
+                                                                <td>{{orders.cityin}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>
+                                                                        <label>Address Destination</label>
+                                                                </td>
+                                                                <td>{{orders.addressin}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>
+                                                                        <label>Offers</label>
+                                                                </td>
+                                                                <td>{{orders.offers}}</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                                <td>
+                                                                        <label>Extras</label>
+                                                                </td>
+                                                                <td>{{orders.extras}}</td>
+
+                                                        </tr>
+                                                </tbody>
+                                        </table>
+                                </div>
+                        </div>
+
+                     <div class=" col-md-6">
+                                <div class='containerDecoration'>
+                                        <div>
+                                                <h2>Bill Entry Form</h2>
+                                        </div>
+
+                                        <form [formGroup]="bills" (ngSubmit)="create()">
+                                                <div class="form-group">
+                                                        <label for="customerid">Customer Id</label>
+                                                        <input formControlName="customerid" id="customerid" type="text" class="form-control" value="{{orders.customerid}}">
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="orderid">Order Id</label>
+                                                        <input formControlName="orderid" id="orderid" type="text" class="form-control" value="{{orderid}}">
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="firstname">First Name</label>
+                                                        <input formControlName="firstname" id="firstname" type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="lastname">Last Name</label>
+                                                        <input formControlName="lastname" id="lastname" type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="hourlyrate">Hourly Rate</label>
+                                                        <input formControlName="hourlyrate" id="hourlyrate" type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="totalhours">Total Hours</label>
+                                                        <input formControlName="totalhours" id="totalhours" type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="totalamount">Total Amount</label>
+                                                        <input formControlName="totalamount" id="totalamount" type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="hst">HST</label>
+                                                        <input formControlName="hst" id="hst" type="text" class="form-control">
+                                                </div>
+
+        
+                                                <button class="btn btn-primary" type="submit"> Submit Order</button>
+                                        </form> 
+
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>

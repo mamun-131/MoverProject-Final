@@ -1,0 +1,77 @@
+<div style="padding-top: 30px;">
+  <div class="row" style="padding-left: 30px;">
+ 
+    
+      <h2> CUSTOMER LIST</h2> 
+      <div class='containerDecoration'>
+        <div class="pre-scrollable" style="max-height:76vh;">
+          <table align="center" class="table table-bordered table-striped table-hover">
+            <thead>
+              <tr align="center">
+                  <td>
+                      <div>
+                        <label>Customer ID</label>
+                      </div>
+                    </td>
+                <td>
+                  <div>
+                    <label>First Name</label>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <label>Last Name</label>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <label>Phone</label>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <label>Email</label>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <label>Address</label>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <label>City</label>
+                  </div>
+                </td>
+                <td>
+                    <div>
+                      <label>Update</label>
+                    </div>
+                  </td>
+                  <td>
+                      <div>
+                        <label>Delete</label>
+                      </div>
+                    </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let customer of customers" align="center">
+                <td>{{customer.id}}</td>
+                <td>{{customer.firstName}}</td>
+                <td>{{customer.lastName}}</td>
+                <td>{{customer.phone}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.address}}</td>
+                <td>{{customer.city}}</td>
+                <td><button  type="submit" (click)="delete(customer)" routerLink='/customerview'  class="btn btn-danger">Delete</button></td>
+                <td><button type="submit" [routerLink]="" class="btn btn-primary">Edit</button></td>
+            
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
