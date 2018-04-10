@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Http, Headers, Request, RequestMethod, Response, RequestOptions} from '@angular/http';
 import { Router, ActivatedRoute } from '@angular/router';
+import { DataserviceService } from '../../dataservice.service';
 
 @Component({
   selector: 'app-order-entry-form',
@@ -17,7 +18,7 @@ export class OrderEntryFormComponent implements OnInit {
   customer: any;
   constructor(private _router: Router,
     private _route: ActivatedRoute,private http: Http, 
-    private _fb: FormBuilder) {
+    private _fb: FormBuilder, private _dataService: DataserviceService) {
     this.ordertitle = "Insert Orders";
     this._route.params.subscribe( params => {
      
@@ -55,6 +56,8 @@ export class OrderEntryFormComponent implements OnInit {
     this.http.post('http://localhost:8080/api/order',JSON.stringify(this.order.value),options)
     .subscribe(response =>{
       this._router.navigate(['/billentry',response.json().id]);
+      this._dataService.customerID=this._dataService.customerID;
+      this._dataService.orderID = response.json().id;
       console.log(response.json());
       console.log(response.json().id);
     },

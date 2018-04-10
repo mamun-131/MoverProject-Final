@@ -1,0 +1,177 @@
+<div class="jumbotron">
+
+    <div class="container">
+        <div class="row">
+            <div class='containerDecoration2'>
+              <h2 style=" text-align: center;">Thank You For your Order Submission</h2>
+            </div>
+        </div>
+        <div class="row"><p></p></div>
+            <div class="row">
+                    <div class="col-md-4">
+
+                            
+                                <div class='containerDecoration1'>
+                                    <div><h4>Customer Data</h4></div>
+                            <table align="center" class="table table-bordered table-striped table-hover">
+                                    <tbody  align="center">
+                                      <tr >          
+                                          <td><label>ID</label></td>
+                                        <td>{{customer.id}}</td>
+                                      </tr>
+                                      <tr>
+                                            <td><label>First Name</label></td>
+                                        <td>{{customer.firstName}}</td>
+                                      </tr>
+                                      <tr >
+                                            <td><label>Last Name</label></td>
+                                        <td>{{customer.lastName}}</td>
+                                      </tr >
+                                      <tr >
+                                            <td><label>Phone</label></td>
+                                        <td>{{customer.phone}}</td>
+                                    </tr>
+                                    <tr >
+                                            <td><label>Email</label></td>
+                                        <td>{{customer.email}}</td>
+                                    </tr>
+                                    <tr >
+                                            <td><label>Address</label></td>
+                                        <td>{{customer.address}}</td>
+                                    </tr>
+                                    <tr >
+                                            <td><label>City</label></td>
+                                        <td>{{customer.city}}</td>
+                                       
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                            
+                    </div>
+
+ <div class="col-md-4 offset-md-1">
+    <div class='containerDecoration1'>
+        <div>
+                <h4>Order Data</h4>
+        </div>
+        <table align="center" class="table table-bordered table-striped table-hover">
+                <tbody align="center">
+                        <tr>
+                                <td>
+                                        <label>Order ID</label>
+                                </td>
+                                <td>{{order.id}}</td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <label>Customer ID</label>
+                                </td>
+                                <td>{{order.customerid}}</td>
+                        </tr>
+
+                        <tr>
+                                <td>
+                                        <label>Move Date</label>
+                                </td>
+                                <td>{{order.movedate}}</td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <label>City Origin</label>
+                                </td>
+                                <td>{{order.cityout}}</td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <label>Address Origin</label>
+                                </td>
+                                <td>{{order.addressout}}</td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <label>City Destination</label>
+                                </td>
+                                <td>{{order.cityin}}</td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <label>Address Destination</label>
+                                </td>
+                                <td>{{order.addressin}}</td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <label>Offers</label>
+                                </td>
+                                <td>{{order.offers}}</td>
+
+                        </tr>
+                        <tr>
+                                <td>
+                                        <label>Extras</label>
+                                </td>
+                                <td>{{order.extras}}</td>
+
+                        </tr>
+                </tbody>
+        </table>
+          </div>
+        </div>
+
+
+          <div class="col-md-4 offset-md-1">
+              <div class='containerDecoration1'>
+                  <div>
+                          <h4>Bill Data</h4>
+                  </div>
+                  <table align="center" class="table table-bordered table-striped table-hover">
+                          <tbody align="center">
+                                  <tr>
+                                          <td>
+                                                  <label>Bill ID</label>
+                                          </td>
+                                          <td>{{bill.id}}</td>
+                                  </tr>
+                                  <tr>
+                                          <td>
+                                                  <label>Order ID</label>
+                                          </td>
+                                          <td>{{bill.orderid}}</td>
+                                  </tr>
+          
+                                  <tr>
+                                          <td>
+                                                  <label>Hourley Rate</label>
+                                          </td>
+                                          <td>{{bill.hourlyrate}}</td>
+                                  </tr>
+                                  <tr>
+                                          <td>
+                                                  <label>Total Hours</label>
+                                          </td>
+                                          <td>{{bill.totalhours}}</td>
+                                  </tr>
+                                  <tr>
+                                          <td>
+                                                  <label>Total Amount</label>
+                                          </td>
+                                          <td>{{bill.totalamount}}</td>
+                                  </tr>
+                                  <tr>
+                                          <td>
+                                                  <label>HST</label>
+                                          </td>
+                                          <td>{{bill.hst}}</td>
+                                  </tr>
+                                
+                          </tbody>
+                  </table>
+              </div>
+      </div>
+    
+
+
+</div>
+</div>
+</div>

@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CustomerViewComponent implements OnInit {
   customers: any;
-  errorMessage: String;
+  errorMessage: string;
   constructor(private _router: Router,
     private _route: ActivatedRoute,private http: Http) { 
 

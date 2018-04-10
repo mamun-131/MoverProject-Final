@@ -1,0 +1,28 @@
+.navbar-custom {
+    background-color: #077981;
+    color: lavender;
+}
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #98fcfc;
+}
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #074949;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color:  #020f0a;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #911010;
+}

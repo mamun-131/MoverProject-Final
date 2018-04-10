@@ -4,7 +4,7 @@
                 <div class="row">
                         <div class="col-md-4">
 
-                                <div class='containerDecoration1'>
+                                <div class='containerDecoration'>
                                         <div>
                                                 <h4>Order Data</h4>
                                         </div>
@@ -39,7 +39,7 @@
                                                                 <td>
                                                                         <label>Address Origin</label>
                                                                 </td>
-                                                                <td>{{order.addressout}}</td>
+                                                                <td>{{orders.addressout}}</td>
                                                         </tr>
                                                         <tr>
                                                                 <td>
@@ -72,29 +72,17 @@
                                 </div>
                         </div>
 
-                     <div class=" col-md-6">
-                                <div class='containerDecoration'>
+     <div class=" col-md-6">
+                                <div class='containerDecoration2'>
                                         <div>
                                                 <h2>Bill Entry Form</h2>
                                         </div>
 
                                         <form [formGroup]="bills" (ngSubmit)="create()">
-                                                <div class="form-group">
-                                                        <label for="customerid">Customer Id</label>
-                                                        <input formControlName="customerid" id="customerid" type="text" class="form-control" value="{{orders.customerid}}">
-                                                </div>
+
                                                 <div class="form-group">
                                                         <label for="orderid">Order Id</label>
                                                         <input formControlName="orderid" id="orderid" type="text" class="form-control" value="{{orderid}}">
-                                                </div>
-
-                                                <div class="form-group">
-                                                        <label for="firstname">First Name</label>
-                                                        <input formControlName="firstname" id="firstname" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                        <label for="lastname">Last Name</label>
-                                                        <input formControlName="lastname" id="lastname" type="text" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                         <label for="hourlyrate">Hourly Rate</label>
@@ -122,3 +110,4 @@
                 </div>
         </div>
 </div>
+

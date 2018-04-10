@@ -156,8 +156,8 @@ body, html {
   padding-right: 30px;
   background-color: rgb(150, 153, 204);
   font-family: Tahoma;
-  background: -webkit-gradient(linear, right top, left top, color-stop(0%,lightseagreen), color-stop(100%,lightgray));
-  background: linear-gradient(to left,lightseagreen,  lightgray);
+  background: -webkit-gradient(linear, right top, left top, color-stop(0%,#17bdb4), color-stop(100%,lightgray));
+  background: linear-gradient(to left,#17bdb4,  lightgray);
   border-radius: 20px;
   overflow: hidden;
    opacity: 0.*7;

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Http, Headers, Request, RequestMethod, Response, RequestOptions} from '@angular/http';
 import { Router, ActivatedRoute } from '@angular/router';
+import { DataserviceService } from '../../dataservice.service';
 @Component({
   selector: 'app-customer-entry-form',
   templateUrl: './customer-entry-form.component.html',
@@ -16,7 +17,7 @@ export class CustomerEntryFormComponent  {
 
   constructor(private _router: Router,
     private _route: ActivatedRoute,private http: Http, 
-    private _fb: FormBuilder){
+    private _fb: FormBuilder, private _dataService: DataserviceService){
     this.customertitle = "Enter the customer detail"
     this.customer = this._fb.group({
      //id: 10,
@@ -34,6 +35,9 @@ export class CustomerEntryFormComponent  {
       address: ['', [Validators.required]],
       city: ['', [Validators.required]]
     })
+
+   
+
   }
 
 create(){
@@ -44,6 +48,7 @@ create(){
   .subscribe(response =>{
     this._router.navigate(['/orderentry',response.json().id]);
     console.log(response.json().id);
+    this._dataService.customerID = response.json().id;
   },
   error => this.errorMessage = error);
 }
